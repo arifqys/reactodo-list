@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Todo from './Todo.js';
 
 class App extends Component {
   constructor() {
@@ -17,10 +18,15 @@ class App extends Component {
     todosCopy.push(this.state.currentTodo);
     this.setState({todos: todosCopy, currentTodo:""});
   }
+  deleteTodo = i => {
+    let todosCopy = this.state.todos.slice();
+    todosCopy.splice(i, 1);
+    this.setState({todos: todosCopy})
+  }
   render() {
     let bulletedTodos = this.state.todos.map((e, i) => {
       return (
-        <li key={i}>{e}</li>
+        <Todo todo={e} delete={() => this.deleteTodo(i)}/>
       );
     });
     return (
