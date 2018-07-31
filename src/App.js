@@ -30,11 +30,14 @@ class App extends Component {
       );
     });
     return (
-      <div>
-        <input placeholder="Next todo" value={this.state.currentTodo} onChange={this.onInputChange}/>
-        <button onClick={this.onClick}>Add</button>
+      <div className="container">
+      <h1>Reactodo List</h1>
+        <div className="container-input">
+          <input placeholder="Next todo" value={this.state.currentTodo} onChange={this.onInputChange}/>
+          <button className="add" onClick={this.onClick}>Add</button>
+        </div>
         <br/>
-        { this.state.todos.length === 0 ? "There is no todo" : <ul>{bulletedTodos}</ul> }
+        { this.state.todos.length === 0 ? <p>There is no todo</p> : <table>{bulletedTodos}</table> }
       </div>
     );
   }

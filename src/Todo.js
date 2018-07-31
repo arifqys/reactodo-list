@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, {} from 'react';
+import './Todo.css';
 
 const Todo = props => {
   return (
-    <li>{props.todo}<button onClick={props.delete}>X</button></li>
+    <tr><td><button className="delete"onClick={props.delete}>X</button></td><td>{props.todo}</td></tr>
   );
 }
 

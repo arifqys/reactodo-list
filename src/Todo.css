@@ -1,0 +1,21 @@
+button.delete {
+  background-color: #222222;
+  color: rgba(0, 0, 0, 0.9);
+  border: none;
+  margin-right: 10px;
+  transform-origin: center;
+
+}
+button.delete:hover {
+  animation: rotate 0.5s;
+  color: #ff0000;
+  transition: all 0.5s;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

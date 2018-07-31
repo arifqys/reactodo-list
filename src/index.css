@@ -1,5 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: monospace;
+  font-size: 20px;
+  background-color: #222222;
+  color: #61dafb;
 }
