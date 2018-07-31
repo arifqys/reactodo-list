@@ -26,7 +26,7 @@ class App extends Component {
   render() {
     let bulletedTodos = this.state.todos.map((e, i) => {
       return (
-        <Todo todo={e} delete={() => this.deleteTodo(i)}/>
+        <Todo key={i} todo={e} delete={() => this.deleteTodo(i)}/>
       );
     });
     return (
@@ -37,7 +37,7 @@ class App extends Component {
           <button className="add" onClick={this.onClick}>Add</button>
         </div>
         <br/>
-        { this.state.todos.length === 0 ? <p>There is no todo</p> : <table>{bulletedTodos}</table> }
+        { this.state.todos.length === 0 ? <p>There is no todo</p> : <table><tbody>{bulletedTodos}</tbody></table> }
       </div>
     );
   }
