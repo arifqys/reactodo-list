@@ -34,7 +34,7 @@ class App extends Component {
       <h1>Reactodo List</h1>
         <div className="container-input">
           <input placeholder="Next todo" value={this.state.currentTodo} onChange={this.onInputChange}/>
-          <button className="add" onClick={this.onClick}>Add</button>
+          <button className="add" onClick={this.state.currentTodo !== "" ? this.onClick : null}>Add</button>
         </div>
         <br/>
         { this.state.todos.length === 0 ? <p>There is no todo</p> : <table><tbody>{bulletedTodos}</tbody></table> }
