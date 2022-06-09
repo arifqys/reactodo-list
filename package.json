@@ -8,7 +8,7 @@
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
   },
-  "homepage": "https://arifqys.github.io/todolist",
+  "homepage": "https://arifqys.github.io/reactodo-list",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
